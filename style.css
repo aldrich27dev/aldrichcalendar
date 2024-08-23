@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.title-head {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+
+.title-content,
+.button-next,
+.mid-title {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin: auto;
+}
+.container-main {
+  display: block;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.content {
+  display: block;
+  align-items: center;
+  text-align: center;
+  border: 3px solid red;
+  padding: 20px;
+  height: 50%;
+}
+
+table {
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  border: 0.2px solid black;
+}
+
+td {
+  border: 0.2px solid black;
+  padding: 10px 10px 20px 10px;
+  box-shadow: 0.25em 0.3em 0.25em rgba(0, 0, 0, 0.5);
+}
+
+th {
+  background-color: rgb(185, 183, 183);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 10px;
+}
+
+td {
+  transition: 0.2s;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 100px;
+  height: 100px;
+}
+
+td:hover {
+  transform: scale(1.1);
+  scale: 1, 1;
+  padding-left: 100px;
+  padding-right: 0%;
+  margin-left: 100px;
+  font-size: 40px;
+}
+
+td span {
+  font-size: 15px;
+  display: block;
+  justify-content: left;
+}
+
+h1 {
+  display: flex;
+  justify-content: left;
+}
+
+.tagline {
+  display: block;
+  font-size: 50px;
+  margin-top: 40px;
+  text-align: center;
+  font-style: italic;
+}
+
+.tagline span {
+  color: red;
+}
+
+li {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
+}
+
+.holidays-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.title-ko {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+.next-button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: right;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.next-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  padding-right: 35px;
+  font-weight: bold;
+}
+
+.next-button span:after {
+  content: '\00bbbb';
+  position: absolute;
+  right: -60px;
+  top: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.next-button:hover span {
+  padding-right: 20px;
+}
+
+.next-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+td,
+.content,
+.next-button,
+.title-ko,
+.tagline,
+li {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
